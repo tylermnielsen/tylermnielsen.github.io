@@ -1,0 +1,65 @@
+/* #181818 #212121 #3d3d3d #ffffff #aaaaaa */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #212121;
+    color: white;
+}
+ 
+header {
+    background-color: black;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    padding: .7em;
+}
+
+nav {
+    background-color: black;  
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+li a:hover {
+    background-color: #212121;
+    outline-color: black;
+    outline-width: 10px 10px 10px 10px;
+    outline-style: solid;
+}
+
+.active {
+    background-color: #212121;
+}
+
+li a {
+    display: block;
+    padding: 1em;
+    background-color: #000000;
+    text-decoration: none;
+    color: red;
+}
+
+#navRight {
+    float: right;
+}
+
