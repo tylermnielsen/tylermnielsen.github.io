@@ -8,6 +8,7 @@
 body {
     background-color: #212121;
     color: white;
+    font-family: "Courier New";
 }
  
 header {
@@ -16,9 +17,10 @@ header {
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     background-color: black;
     padding: .7em;
+    font-style: normal;
 }
 
 nav {
@@ -42,9 +44,6 @@ nav li {
 
 li a:hover {
     background-color: #212121;
-    outline-color: black;
-    outline-width: 10px 10px 10px 10px;
-    outline-style: solid;
 }
 
 .active {
@@ -56,10 +55,23 @@ li a {
     padding: 1em;
     background-color: #000000;
     text-decoration: none;
-    color: red;
+    color: white;
 }
 
 #navRight {
     float: right;
+}
+
+main {
+    width: 100%;
+}
+
+iframe {
+    display: block;
+    margin: 1em auto;   
+}
+
+a {
+    color: white;
 }
 
