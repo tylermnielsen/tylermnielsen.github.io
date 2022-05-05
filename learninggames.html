@@ -8,17 +8,82 @@
         
         <style> 
             main {
-                min-height: 100px;
-                margin: 1em;
-                
+                margin: 2%;
+                width: 96%;
             }
             hr {
+                width: 100%;
                 margin: 1em 0;
             }
             #rps-input {
                 margin: .5em;
             }
 
+            #grid {
+                width: 400px;
+                height: 300px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 1em;
+            }
+
+            #whackamole .grid {
+                width: 456px;
+                height: 456px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 1em;
+            }
+
+            #whackamole .square {
+                height: 150px;
+                width: 150px;
+                border: solid black 1px;
+            }
+
+            .mole {
+                background-color: blue;
+            }
+
+            #wstartButton {
+                margin: 1em;
+                padding: .5em;
+            }
+
+            #breakout {
+                height: 375px;
+            }
+
+            .bgrid {
+                margin: 1em;
+                position: absolute;
+                width: 600px;
+                height: 300px;
+                border: solid black 1px;
+            }
+
+            .block {
+                position: absolute;
+                width: 100px;
+                height: 20px;
+                background-color: red;
+                
+            }
+
+            .user {
+                position: absolute;
+                width: 100px;
+                height: 20px;
+                background-color: black;
+            }
+
+            .ball {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                background-color: whitesmoke;
+            }
 
         </style>
     </head>
@@ -58,10 +123,10 @@
 
             <hr>
 
-            <div id="matching">
+            <div id="memory-game">
                 <h2>Memory Game</h2>
 
-                <h3>Score: <span id="result"></span></h3>
+                <h3>Score: <span id="score"></span></h3>
 
                 <div id="grid">
 
@@ -70,7 +135,42 @@
                 <script src="scripts/learninggames/memory-game.js"></script>
             </div>
 
+            <hr>
 
+            <div id="whackamole">
+                <h2>Whack A Mole</h2>
+
+                <h3>Score:</h3>
+                <h3 id="wscore">0</h2>
+                <h3>Time Left:</h3>
+                <h3 id="time-left">60</h3>
+                <button id="wstartButton">Begin</button>
+                <div class="grid">
+                    <div class="square"  id="1"></div>
+                    <div class="square" id="2"></div>
+                    <div class="square" id="3"></div>
+                    <div class="square" id="4"></div>
+                    <div class="square" id="5"></div>
+                    <div class="square" id="6"></div>
+                    <div class="square" id="7"></div>
+                    <div class="square" id="8"></div>
+                    <div class="square" id="9"></div>
+
+                </div>
+
+                <script src="scripts/learninggames/whackamole.js"></script>
+            </div>
+
+            <hr>
+
+            <div id="breakout">
+                <h2>Breakout</h2>
+                <button id="bbegin">Begin</button>
+
+                <div class="bgrid"></div>
+
+                <script src="scripts/learninggames/breakout.js"></script>
+            </div>
 
         </main>
         
