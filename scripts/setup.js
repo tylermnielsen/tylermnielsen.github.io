@@ -14,6 +14,7 @@ header.innerHTML = `<h1><a href="index.html" style="text-decoration: none;">[|]<
     <ul>\
         <li><a href="index.html" id="index">Home</a></li>\
         <li><a href="vpvideos.html" id="vpvideos">Generative Art</a></li>\
+        <li><a href="goodreadsStat.html" id="goodreadsStat">Goodreads Stat</a></li>\
     </ul> \
 </nav>`;
 
