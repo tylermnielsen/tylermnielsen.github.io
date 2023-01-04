@@ -12,6 +12,21 @@
         .point:hover {
             fill: blueviolet;
         }
+        #yearCounts {
+            border: solid black 2px;
+            border-radius: 10px;
+            width: 100%-40;
+            height: 500px;
+            padding: 20px;
+        }
+        #authorGender {
+            border: solid black 2px;
+            border-radius: 10px;
+            width: 100%-40;
+            height: 300px;
+            padding: 20px;
+            margin-top: 1em;
+        }
     </style>
 
 </head>
@@ -35,9 +50,15 @@
         <hr />
 
         <div id="results">
-            <div id="yearCounts"></div>
+            <div id="yearCounts">
+                Input library csv to see charts.
+            </div>
 
-            <div id="authorGender"></div>
+            <div id="authorGender">
+                <div id="genderPie"></div>
+                <div id="fixingForm"></div>
+                Input library csv to see charts.
+            </div>
             
         </div>
 
