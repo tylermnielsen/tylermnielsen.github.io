@@ -2,41 +2,106 @@
 
 <html>
     <head>
-        <title>Tyler Nielsen</title>
+        <title>Tyler Nielsen - Computer Systems Engineering Student</title>
         <meta charset="UTF-8" />
-
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         <nav>
-            <a href="#aboutme">About Me</a>
-            
+            <ul>
+                <li class="logo"><a href="#top" class="nav-link">[|]</a></li>
+                <li><a href="#aboutme" class="nav-link active">About Me</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </nav>
 
         <div id="content">
-            <header>
-
+            <header id="top">
+                <h1>Tyler Nielsen</h1>
+                <p>Computer Systems Engineering Student</p>
             </header>
 
-            <div id="aboutme">
-                <h1>About Me</h1>
-            </div>
+            <img src="images/profile.jpg" alt="Profile Image" class="profile-image">
 
-            <div id="experience">
-                <h1>About Me</h1>
-            </div>
+            <section id="aboutme">
+                <h2>About Me</h2>
+                <p>I'm a junior studying Computer Systems Engineering at Arizona State University with a focus on aerospace and embedded systems. I’ve got a solid background in C/C++, microcontroller development, and digital circuit design. I’ve worked on projects involving real-time operating systems, communication protocols, and low power radio. I’m excited to bring my technical skills and problem-solving abilities to exciting projects in computer engineering.</p>
+                <a href="resume.pdf" download="Tyler_Nielsen_Resume.pdf" class="download-button">Download Resume</a>
+            </section>
 
-            <div id="projects">
-                <h1>About Me</h1>
-            </div>
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-item">
+                    <img src="images/favicon200x200.png" alt="Project 1 Image" class="project-image">
+                    <div>
+                        <h3>Project 1: Real-Time Operating System</h3>
+                        <p>Developed a real-time operating system for an embedded system using C/C++. Implemented task scheduling, inter-task communication, and real-time clock management.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="images/favicon200x200.png" alt="Project 2 Image" class="project-image">
+                    <div>
+                        <h3>Project 2: Low Power Radio Communication</h3>
+                        <p>Designed and implemented a low power radio communication protocol for IoT devices. Utilized microcontrollers and RF modules to achieve efficient communication with minimal power consumption.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="images/favicon200x200.png" alt="Project 3 Image" class="project-image">
+                    <div>
+                        <h3>Project 3: Digital Circuit Design</h3>
+                        <p>Created a digital circuit design for a custom microcontroller using Verilog. Simulated and tested the design using FPGA to ensure proper functionality and performance.</p>
+                    </div>
+                </div>
+            </section>
 
-            <footer>
-                
+            <footer id="contact">
+                <h2>Contact</h2>
+                <br>
+                <a href="https://github.com/SnailDragon" target="_blank"><img src="images/github-mark.svg"></a> 
+                <a href="https://www.linkedin.com/in/tylernie/" target="_blank"><img src="images/linkedinblue.png"></a> 
+                <a href="https://leetcode.com/tylernielsenn/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"></a> 
             </footer>
 
         </div>
         
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var navLinks = document.querySelectorAll('.nav-link');
+                var sections = document.querySelectorAll('section, footer');
+
+                function onScroll() {
+                    var scrollPos = window.scrollY + 100;
+                    sections.forEach(function(section) {
+                        var sectionTop = section.offsetTop;
+                        var sectionHeight = section.offsetHeight;
+                        var sectionId = section.getAttribute('id');
+                        var navLink = document.querySelector('a[href="#' + sectionId + '"]');
+
+                        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                            navLinks.forEach(function(link) {
+                                link.classList.remove('active');
+                            });
+                            navLink.classList.add('active');
+                        }
+                    });
+                }
+
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        if (this.getAttribute('href') === '#top') {
+                            navLinks.forEach(function(link) {
+                                link.classList.remove('active');
+                            });
+                            document.querySelector('a[href="#aboutme"]').classList.add('active');
+                        }
+                    });
+                });
+
+                window.addEventListener('scroll', onScroll);
+                onScroll();
+            });
+        </script>
     </body>
-
-
 </html>
