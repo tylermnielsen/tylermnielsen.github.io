@@ -119,6 +119,10 @@ header h1 {
   object-fit: cover;
 }
 
+p {
+  text-indent: 2em;
+}
+
 section {
   margin-bottom: 10px; /* Decrease margin-bottom */
   padding: 20px;
