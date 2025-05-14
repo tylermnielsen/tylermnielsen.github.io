@@ -14,7 +14,6 @@ body {
 }
 
 nav {
-  background-color: #3b82f6; /* Light blue */
   color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 15%;
@@ -22,7 +21,7 @@ nav {
 }
 
 nav ul {
-  background-color: #3b82f6; /* Light blue */
+  background-color: #192359; 
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -71,12 +70,12 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   background-color: #ffffff; /* White */
-  color: #3b82f6; /* Light blue */
+  color: #192359; 
 }
 
 nav ul li a.about-me {
   background-color: #ffffff; /* White */
-  color: #3b82f6; /* Light blue */
+  color: 	#192359; 
 }
 
 nav ul li.logo a.active {
@@ -138,7 +137,7 @@ section {
   display: inline-block;
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: #3b82f6; /* Light blue */
+  background-color: #192359; 
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -146,7 +145,7 @@ section {
 }
 
 .download-button:hover {
-  background-color: #60a5fa; /* Lighter blue */
+  opacity: 0.85;
 }
 
 .project-item {
