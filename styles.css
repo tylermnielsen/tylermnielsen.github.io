@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0; 
@@ -7,7 +8,8 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  /* font-family: 'Consolas', 'Liberation Mono', 'Courier New', monospace; */
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   /* background-color: #f0f4f8; */
   background-color: white;
